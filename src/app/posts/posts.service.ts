@@ -45,4 +45,11 @@ export class PostsService {
         this.postsUpdated.next([...this.posts]);
       });
   }
+  deletePost(id: string) {
+    this.http.delete('http://localhost:3000/api/posts/' + id).subscribe(() => {
+      const updatedPosts = this.posts.filter(post => post.id !== id);
+      this.posts = updatedPosts;
+      this.postsUpdated.next([...this.posts]);
+    });
+  }
 }
