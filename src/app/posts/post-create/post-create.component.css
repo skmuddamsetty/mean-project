@@ -2,17 +2,20 @@ mat-form-field,
 textarea {
   width: 100%;
 }
+
 mat-spinner {
   margin: auto;
 }
-.file {
-  visibility: hidden !important;
+
+input[type="file"] {
+  visibility: hidden;
 }
-.img-preview {
+
+.image-preview {
   height: 5rem;
   margin: 1rem 0;
 }
 
-.img-preview img {
+.image-preview img {
   height: 100%;
 }
