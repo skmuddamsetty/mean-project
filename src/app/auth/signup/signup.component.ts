@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
     if (ngForm.invalid) {
       return;
     }
+    this.isLoading = true;
     this.authService.createUser(ngForm.value.email, ngForm.value.password);
   }
 }
